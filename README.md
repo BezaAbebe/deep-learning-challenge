@@ -3,13 +3,30 @@ Module 21 Challenge
 
 ## Overview of the Analysis
 
-The pupose of this analysis is to build and optimize a deep leaning model to prdict the success of charity funding applications. Using machine learning and neural netowrkd, this challenge amis to decelop a binary classifer that predict whether funding apprication will be successful or not, with a goal of achieving a predictive accuracey of 75% or higher.
-
-
+The purpose of this analysis is to build and optimize a deep learning model to predict the success of charity funding applications. Using machine learning and neural networks, this challenge aims to develop a binary classifier that predicts whether a funding application will be successful or not, with a goal of achieving a predictive accuracy of 75% or higher.
 
 ## Results
-- Data Preprocessing
-- Compiling, Training, and Evaluating the Model
+* Data Preprocessing
+    * Target Variable: IS_SUCCESSFUL
+    * Feature Variables: APPLICATION_TYPE, AFFILIATION, CLASSIFICATION, USE_CASE, ORGANIZATION, STATUS, INCOME_AMT, SPECIAL_CONSIDERATIONS, and ASK_AMT
+    * Removed Variables: EIN, or NAME
+        * These columns were removed as they are identifiers and do not contribute to the predictive power of the model.
+     
+  
+* Compiling, Training, and Evaluating the Model
+    * First Attempt
+        * Neurons:
+        * Layers: 2 hidden layers
+        * Activation Functions
+        * Result: 73%
+        * Achived the target model performance?: 
+    * Second Attempt
+        * Changes: Dropped the following columns: EIN, NAME, and SPECIAL_CONSIDERATIONS
+              * more 
+        * Result: 71%
+        * Did the attempts increase model performance?:
+
+
 
 ## Summary
 
