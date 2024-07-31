@@ -12,21 +12,31 @@ The dataset provided by the charity company contains over 34,000 records of orga
     * Target Variable: IS_SUCCESSFUL
     * Feature Variables: APPLICATION_TYPE, AFFILIATION, CLASSIFICATION, USE_CASE, ORGANIZATION, STATUS, INCOME_AMT, SPECIAL_CONSIDERATIONS, and ASK_AMT
     * Removed Variables: EIN, or NAME
-        * These columns were removed as they are identifiers and do not contribute to the predictive power of the model.
+    * These columns were removed as they are identifiers and do not contribute to the predictive power of the model.
      
   
 * Compiling, Training, and Evaluating the Model
     * First Attempt
-        * Neurons:
-        * Layers: 2 hidden layers
-        * Activation Functions
-        * Result: 73%
-        * Achived the target model performance?: 
-    * Second Attempt
-        * Changes: Dropped the following columns: EIN, NAME, and SPECIAL_CONSIDERATIONS
-              * more 
-        * Result: 71%
-        * Did the attempts increase model performance?: No
+        * First Hidden Layer: 100 neurons
+        * Second Hidden Layer: 50 neurons
+        * Two hidden Layers
+        * one output layer
+        * Activation Functions:
+             * ReLU for hidden layers (introduces non-linearity and helps in learning complex patterns)
+             * Sigmoid for output layer (outputs probabilities for binary classification)
+             * The reason ReLu activation function is used is because it is the most commenly used for                     hidden layers and it helps the model learn complex model. In additon the reason why the                    Sigmoid activation funditon in the output layer is used because it is very suitable for                      binary classification as its outcome probabilitis are between 0 and 1.
+         * Target Model Performance:
+            * Test Loss: 0.5726
+            * Test Accuracy: 0.7283
+            * The target model performance of achieving higher than 75% accuracy was not met.
+        * Steps Taken to Optimize Model Performance:
+               * Dropped unnecessary columns: EIN, NAME, and SPECIAL_CONSIDERATIONS.
+               * Increased the cutoff value and created a list of application types to be replaced, changing from 500 to 5000.
+               * Used the Affiliation variable name for classification to replace.
+               * The target model performance of achieving higher than 75% accuracy was not met in this optimization attempt.
+          
+          
+
 
 ## Summary
 
